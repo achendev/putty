@@ -1161,7 +1161,7 @@ void connection_fatal(void *frontend, const char *fmt, ...)
     stuff = dupvprintf(fmt, ap);
     va_end(ap);
     sprintf(morestuff, "%.70s Fatal Error", appname);
-    MessageBox(hwnd, stuff, morestuff, MB_ICONERROR | MB_OK);
+    //MessageBox(hwnd, stuff, morestuff, MB_ICONERROR | MB_OK);
     sfree(stuff);
 
     if (conf_get_int(conf, CONF_close_on_exit) == FORCE_ON)
